@@ -2,48 +2,31 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="demo.js"></script>
+
+<!--
+    1.first create html code 2.create external script 3.update inside html 3.create function update BMI
+    functionality(refer formula in google) 4.based BMI update :category 5. normal weight,lowweight,obsiety,severe
+    obsiety
+
+     formula=      {bmi=wight(kgm)/[hight(meter)]2}
+   
+-->
+
 </head>
 
 <body>
-  <script>
-    var name="ahamed"
-    var mark=parseInt(prompt("enter your mark"))
-    var total=mark*100/500.0
-    document.write(total)
-     if(total>=90)
-  {
-    alert("A grade")
-  }
-
-  else if(total>=80)
-{
-  alert("B grade")
-}
-
-else if(total>=70)
-{
-  alert("C grade")
-}
-
-else if(total>=60)
-{
-  alert("D grade")
-}
-
-else if(total>=50)
-{
-  alert("E grade")
-}
-
-else{
- document.write(":fail")
-}
-
-
-  </script>
+   <center> <h1>Your Category <button onclick="bmi()">click here!</button></center>
+<!--formula BMI =WEIGHT (KG)/ HEIGHT (METER 2)
+FOR EX:
+ WEIGHT = 70
+ HIGHT=170
+ 70/170(1.70*1.70)
+ -->        
+    </h1> 
 </body>
 
 </html>
