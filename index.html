@@ -5,9 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="demo.js"></script>
+    <script>
+        var wight = parseInt(prompt("enter your wight"))
+        var hight = parseInt(prompt("enter your hight"))
 
-<!--
+        var meter = hight / 100
+        var total = wight / (meter * meter)
+        var decimal = Math.trunc(total)
+
+        function bmi() {
+            if (total <= 18) {
+                document.write("under weight=" + decimal)
+
+            }
+            else if (total >= 18.5 && total <= 24) {
+                document.write("normal =" + decimal)
+            }
+            else if (total >= 25 && total <= 29) {
+                document.write("over weight = " + decimal)
+            }
+
+            else if (total >= 30 && total <= 34) {
+                document.write("obese =" + decimal)
+            }
+
+            else if (total >= 35) {
+                document.write("extremely obese =" + decimal)
+            }
+
+
+        }
+
+
+    </script>
+
+    <!--
     1.first create html code 2.create external script 3.update inside html 3.create function update BMI
     functionality(refer formula in google) 4.based BMI update :category 5. normal weight,lowweight,obsiety,severe
     obsiety
@@ -19,14 +51,16 @@
 </head>
 
 <body>
-   <center> <h1>Your Category <button onclick="bmi()">click here!</button></center>
-<!--formula BMI =WEIGHT (KG)/ HEIGHT (METER 2)
+    <center>
+        <h1>Your Category <button onclick="bmi()">click here!</button>
+    </center>
+    <!--formula BMI =WEIGHT (KG)/ HEIGHT (METER 2)
 FOR EX:
  WEIGHT = 70
  HIGHT=170
  70/170(1.70*1.70)
- -->        
-    </h1> 
+ -->
+    </h1>
 </body>
 
 </html>
