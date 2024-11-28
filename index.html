@@ -5,62 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-        var wight = parseInt(prompt("enter your wight"))
-        var hight = parseInt(prompt("enter your hight"))
-
-        var meter = hight / 100
-        var total = wight / (meter * meter)
-        var decimal = Math.trunc(total)
-
-        function bmi() { 
-            if (total <= 18) {
-                document.write("under weight=" + decimal)
-
-            }
-            else if (total >= 18.5 && total <= 24) {
-                document.write("normal =" + decimal)
-            }
-            else if (total >= 25 && total <= 29) {
-                document.write("over weight = " + decimal)
-            }
-
-            else if (total >= 30 && total <= 34) {
-                document.write("obese =" + decimal)
-            }
-
-            else if (total >= 35) {
-                document.write("extremely obese =" + decimal)
-            }
-
-
-        }
-
-
-    </script>
-
-    <!--
-    1.first create html code 2.create external script 3.update inside html 3.create function update BMI
-    functionality(refer formula in google) 4.based BMI update :category 5. normal weight,lowweight,obsiety,severe
-    obsiety
-
-     formula=      {bmi=wight(kgm)/[hight(meter)]2}
-   
--->
-
+    <script src="sampl.js"></script>
+    <link rel="stylesheet" href="sample.css">
+    <link  href="welcome.html">
 </head>
-
+<div class="wrapper">
 <body>
-    <center>
-        <h1>Your Category <button onclick="bmi()">click here!</button>
-    </center>
-    <!--formula BMI =WEIGHT (KG)/ HEIGHT (METER 2)
-FOR EX:
- WEIGHT = 70
- HIGHT=170
- 70/170(1.70*1.70)
- -->
-    </h1>
+    <h1>Regiester Form</h1>
+    <form name="myform" id="form" onsubmit="return validat()" action="welcome.html">
+        <p class="input-box">
+            <label for="username">Username:</label>
+            <input type="text" id="name" value="" placeholder="enter your name"><br>
+            <span id="name-error" class="error"></span>
+            <i></i>
+        </p>
+
+        <p class="input-box">
+            <label for="password">password:</label>
+            <input type="password" id="password" value="" placeholder="enter your password"><br>
+            <span id="pws-error" class="error"></span>
+        </p>
+
+        <p class="input-box">
+            <label for="email">Email:</label>
+            <input type="text" id="email" value="" placeholder="enter your email"><br>
+            <span id="email-error" class="error"></span>
+        </p>
+
+        <p class="input-box">
+            <label for="password">contacttnumber:</label>
+            <input type="number" id="number" value="" placeholder="enter your number"><br>
+            <span id="cantact-error" class="error"></span>
+        </p>
+        
+        <p class="btn">
+            
+            <input type="submit" id="submit"  action="https://sheetdb.io/api/v1/ml3qt6krzi1f4">
+            <input type="reset" id="reset" >
+        </p>
+    </form>
+</div>
 </body>
 
 </html>
